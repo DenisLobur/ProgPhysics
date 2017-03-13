@@ -18,5 +18,6 @@ class Walker {
     
     x += stepX;
     y += stepY;
+    
   }
 }

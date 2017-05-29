@@ -1,10 +1,14 @@
+import java.util.Random;
+
 class Walker {
   int x;
   int y;
+  Random rand;
 
   Walker() {
     x = width/2;
     y = height/2;
+    rand = new Random();
   }
 
   void display() {
@@ -13,8 +17,8 @@ class Walker {
   }
 
   void step() {
-    float stepX = random(-1, 1);
-    float stepY = random(-1, 1);
+    float stepX = (float)rand.nextGaussian(); // using Gausian(normal) destribution
+    float stepY = random(-1, 1);              // using random
     
     x += stepX;
     y += stepY;
